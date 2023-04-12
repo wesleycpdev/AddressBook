@@ -25,10 +25,10 @@ public class AddressBook {
         System.out.print("Cidade: ");
         String city = scanner.nextLine();
         System.out.print("Telefone: ");
-        String phoneNumber = scanner.nextLine();
+        String phone = scanner.nextLine();
         System.out.print("Email: ");
         String email = scanner.nextLine();
-        Contact contact = new Contact(name, city, phoneNumber, email);
+        Contact contact = new Contact(name, city, phone, email);
         contacts.add(contact);
         System.out.println("Contato criado com sucesso!");
     }
@@ -43,12 +43,12 @@ public class AddressBook {
                 System.out.print("Cidade: ");
                 String newAddress = scanner.nextLine();
                 System.out.print("Telefone: ");
-                String newPhoneNumber = scanner.nextLine();
+                String newPhone = scanner.nextLine();
                 System.out.print("Email: ");
                 String newEmail = scanner.nextLine();
                 contact.setName(newName);
                 contact.setCity(newAddress);
-                contact.setPhoneNumber(newPhoneNumber);
+                contact.setPhone(newPhone);
                 contact.setEmail(newEmail);
                 System.out.println("Contato editado com sucesso!");
                 return;

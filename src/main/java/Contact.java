@@ -1,13 +1,13 @@
 public class Contact {
     private String name;
     private String city;
-    private String phoneNumber;
+    private String phone;
     private String email;
 
-    public Contact(String name, String city, String phoneNumber, String email) {
+    public Contact(String name, String city, String phone, String email) {
         this.name = name;
         this.city = city;
-        this.phoneNumber = phoneNumber;
+        this.phone = phone;
         this.email = email;
     }
 
@@ -29,12 +29,12 @@ public class Contact {
         this.city = city;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhone(String phoneNumber) {
+        this.phone = phoneNumber;
     }
 
     public String getEmail() {
@@ -49,6 +49,6 @@ public class Contact {
 
     @Override
     public String toString() {
-        return "Nome: " + name + "\nCidade: " + city + "\nTelefone: " + phoneNumber + "\nEmail: " + email + "\n";
+        return "Nome: " + name + "\nCidade: " + city + "\nTelefone: " + phone + "\nEmail: " + email + "\n";
     }
 }
