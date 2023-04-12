@@ -14,6 +14,14 @@ public class AddressBook {
     public void addContact () {
         System.out.print("Nome: ");
         String name = scanner.nextLine();
+
+        for (Contact contact : contacts) {
+            if (contact.getName().equals(name)) {
+                System.out.println("Contato com nome já criado, informe outro nome: ");
+                name = scanner.nextLine();
+            }
+        }
+
         System.out.print("Cidade: ");
         String city = scanner.nextLine();
         System.out.print("Telefone: ");
