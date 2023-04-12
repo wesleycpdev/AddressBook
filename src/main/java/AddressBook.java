@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class AddressBook {
 
-    private ArrayList<Contact> contacts;
-    private Scanner scanner;
+    private final ArrayList<Contact> contacts;
+    private final Scanner scanner;
 
     public AddressBook() {
         contacts = new ArrayList<>();
@@ -81,24 +81,16 @@ public class AddressBook {
             int choice = scanner.nextInt();
             scanner.nextLine();
             switch (choice) {
-                case 1:
-                    addContact();
-                    break;
-                case 2:
-                    editContact();
-                    break;
-                case 3:
-                    deleteContact();
-                    break;
-                case 4:
-                    listContacts();
-                    break;
-                case 5:
+                case 1 -> addContact();
+                case 2 -> editContact();
+                case 3 -> deleteContact();
+                case 4 -> listContacts();
+                case 5 -> {
                     System.out.println("Saindo...");
                     scanner.close();
                     return;
-                default:
-                    System.out.println("Opção invalida!");
+                }
+                default -> System.out.println("Opção invalida!");
             }
         }
     }
